@@ -1,9 +1,6 @@
 var list='';
 $(function(){
     // console.log("init");
-    document.getElementsByClassName("queryBtn")[0].onclick=function(){
-        compare(document.getElementsByClassName("queryInput")[0].value);
-    };
 	$.ajax({
 		url:'https://rawgit.com/javahan13216100272/Zt-Page/master/itemList.json',
 		data:'',
@@ -18,6 +15,10 @@ $(function(){
 			console.log('error:',a,b,c);
 		}
 	})
+    document.getElementsByClassName("queryBtn")[0].onclick=function(){
+        compare(document.getElementsByClassName("queryInput")[0].value);
+    };
+	
 
 });
 function replaceStr(str){
