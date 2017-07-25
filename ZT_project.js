@@ -1,6 +1,6 @@
 var list='';
 $(function(){
-    // console.log("init");
+     console.log("init start");
 	$.ajax({
 		url:'https://rawgit.com/javahan13216100272/Zt-Page/master/itemList.json',
 		data:'',
@@ -18,6 +18,7 @@ $(function(){
     document.getElementsByClassName("queryBtn")[0].onclick=function(){
         compare(document.getElementsByClassName("queryInput")[0].value);
     };
+	console.log("init finish");
 	
 
 });
