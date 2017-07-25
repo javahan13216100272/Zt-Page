@@ -5,7 +5,7 @@ $(function(){
         compare(document.getElementsByClassName("queryInput")[0].value);
     };
 	$.ajax({
-		url:'https://rawgit.com/javahan13216100272/helloZt/master/itemList.json',
+		url:'https://rawgit.com/javahan13216100272/Zt-Page/master/itemList.json',
 		data:'',
 		dataType:'json',
 		type:'POST',
