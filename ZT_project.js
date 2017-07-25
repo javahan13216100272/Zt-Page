@@ -1,32 +1,24 @@
 var list='';
-$.ajax({
-	url:'https://rawgit.com/javahan13216100272/helloZt/master/itemList.json',
-	data:'',
-	dataType:'json',
-	type:'POST',
-	async:false,
-	success:function(json){
-		list=json;
-	},
-	error:function(a,b,c){
-		
-	}
-})
-
-
-/*wyh */
-// list=[
-// {"物料编码":"710021000000156 ","物料描述":"正泰‘昆仑’样品箱","原开单价":"110","新开单价":"113"},
-// {"物料编码":"710021000000158 ","物料描述":"DZ47LE-63 1P+N D6 50mA","原开单价":"110","新开单价":"113"},
-// {"物料编码":"710021000000159 ","物料描述":"PZ30-20明装配电箱体1mm(双排)","原开单价":"110","新开单价":"113"},
-// {"物料编码":"710021000000160 ","物料描述":"NB1-63DC 4P C63A DC1000V 6kA(R)","原开单价":"110","新开单价":"113"}
-// ];
-
 $(function(){
     // console.log("init");
     document.getElementsByClassName("queryBtn")[0].onclick=function(){
         compare(document.getElementsByClassName("queryInput")[0].value);
     };
+	$.ajax({
+		url:'https://rawgit.com/javahan13216100272/helloZt/master/itemList.json',
+		data:'',
+		dataType:'json',
+		type:'POST',
+		async:false,
+		success:function(json){
+			console.log('success:data=',json)
+			list=json;
+		},
+		error:function(a,b,c){
+			console.log('error:',a,b,c);
+		}
+	})
+
 });
 function replaceStr(str){
     var newStr=str.toUpperCase();
