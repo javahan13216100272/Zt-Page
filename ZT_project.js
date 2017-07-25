@@ -11,8 +11,8 @@ $(function(){
 			console.log('success:data=',json)
 			list=json;
 		},
-		error:function(a,b,c){
-			console.log('error:',a,b,c);
+		error:function(XMLHttpRequest, textStatus, errorThrown){
+			console.log('error:','XMLHttpRequest.status=',XMLHttpRequest.status,'	XMLHttpRequest.readyState=',XMLHttpRequest.readyStateb,'textStatus:',textStatus);
 		}
 	})
     document.getElementsByClassName("queryBtn")[0].onclick=function(){
